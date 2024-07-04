@@ -16,7 +16,7 @@ class NoteService {
     const newNote = new NoteModel({
       title,
       content,
-      date: new Date(date),
+      date: date ? new Date(date) : undefined, // Only include date if provided
     });
 
     await newNote.save();

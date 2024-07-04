@@ -11,7 +11,12 @@ class NoteController {
 
   createNote = async (req: Request, res: Response): Promise<void> => {
     try {
-      const createNoteDto: CreateNoteDto = req.body;
+      const { title, content, date } = req.body;
+      const createNoteDto: CreateNoteDto = {
+        title,
+        content,
+        date: date ? new Date(date) : undefined, // Handle optional date
+      };
       const note = await this.noteService.createNote(createNoteDto);
       res.status(201).json(note);
     } catch (error) {

@@ -146,6 +146,22 @@ export function Timer() {
     }
   }, [state]);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const postNotes = async (modelResponse: any) => {
+    const { title, content } = modelResponse; // Destructure title and content
+    try {
+      await post(
+        "/api/notes",
+        JSON.stringify({
+          title,
+          content,
+          date: new Date().toISOString(), // Add the date field
+        })
+      );
+    } catch (err) {
+      console.error("Error posting notes", err);
+    }
+  };
   const postNotesRequest = async () => {
     try {
       const response = await post(
@@ -156,7 +172,9 @@ export function Timer() {
           model: "gemini-1.5-flash-latest",
         })
       );
-      const modelResponse = response.text;
+      const modelResponse = await response.json(); // Parse response as JSON
+      postNotes(modelResponse);
+
       SetIsLoading(false);
       setIsVisible(true);
       setTimestampText(modelResponse.trim());
