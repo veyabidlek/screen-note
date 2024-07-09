@@ -2,7 +2,7 @@ export default function MainContainer() {
   return (
     <div className="bg-[#D34836]  rounded-2xl flex flex-col items-center justify-center  pt-8 pb-16 px-32 w-[700px]">
       <h1 className="text-white  whitespace-nowrap text-5xl font-bold mb-6 text-center ">
-        Экранынды түсіріп
+        Экраныңды түсіріп
         <br />
         Әдемі жазбалар ал
       </h1>

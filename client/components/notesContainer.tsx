@@ -4,7 +4,7 @@ interface NoteProps {
 }
 
 const Note: React.FC<NoteProps> = ({ title, content }) => (
-  <div className="bg-pink-100 rounded-lg overflow-hidden mb-4  flex items-center w-[450px]">
+  <div className="bg-[#F6DAD7] rounded-lg overflow-hidden mb-4  flex items-center w-[450px]">
     <div className="pl-2 pr-8">
       <h3 className="font-bold text-md tracking-wider">{title}</h3>
       <p className="text-sm tracking-wider	">{content}</p>
