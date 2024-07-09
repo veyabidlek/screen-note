@@ -12,7 +12,9 @@
     "deploy": "vite build && gcloud app deploy app.yaml --version demo"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.0.19",
     "@google/generative-ai": "^0.11.3",
+    "@next/font": "^14.2.4",
     "@use-gesture/react": "^10.3.1",
     "bcryptjs": "^2.4.3",
     "compromise": "^14.11.2",

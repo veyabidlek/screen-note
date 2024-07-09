@@ -7,7 +7,7 @@ export function Loading() {
   if (!isLoading) return null;
 
   return (
-    <div className="fixed pl-[150px] inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
+    <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
       <div role="status">
         <svg
           aria-hidden="true"
@@ -25,7 +25,6 @@ export function Loading() {
             fill="currentFill"
           />
         </svg>
-        <span className="sr-only">Loading...</span>
       </div>
     </div>
   );

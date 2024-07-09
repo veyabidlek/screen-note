@@ -1,18 +1,15 @@
-import { Note } from "./generated-note";
-
-// import { Gemini } from "./Gemini";
-import Sidebar from "./Sidebar";
-import { Timer } from "./Timer";
-import LearnMore from "./how-it-works-btn";
+import MainContainer from "./components/mainContainer";
+import NotesContainer from "./components/notesContainer";
 import { Loading } from "./loading";
+
 function App() {
   return (
-    <div className="">
-      <Sidebar />
-      <Timer />
-      <LearnMore />
+    <div className="flex justify-center items-center min-h-screen bg-[#244855] p-8">
+      <div className="flex space-x-16">
+        <MainContainer />
+        <NotesContainer />
+      </div>
       <Loading />
-      <Note />
     </div>
   );
 }

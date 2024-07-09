@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 /* Add this CSS to your global stylesheet or component's CSS module */
+body {
+  background-color: #244855;
+  font-family: "Inter";
+}
+
 .loader {
   border: 16px solid #f3f3f3; /* Light grey */
   border-top: 16px solid #3498db; /* Blue */
