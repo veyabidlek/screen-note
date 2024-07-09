@@ -11,13 +11,6 @@ export function Note() {
 
   return (
     <>
-      <button
-        onClick={toggleVisibility}
-        className="absolute bottom-[-21px] z-40 left-0 px-[93px] py-2 bg-red-500 text-white shadow-md hover:bg-red-600 transition duration-300 ease-in-out"
-      >
-        Show Recent Note
-      </button>
-
       {isVisible && (
         <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
           <div className="bg-white shadow-lg rounded-lg ml-[150px] p-6 w-[700px] h-[600px]">
